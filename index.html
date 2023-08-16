@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation Factory</title>
+
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico" type="image/x-icon" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;500;700;800&display=swap"
+        rel="stylesheet" />
+
+    <!-- Styling Framework -->
+    <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css.map" />
+
+    <!-- Plugins -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css"
+        integrity="sha512-ZnR2wlLbSbr8/c9AgLg3jQPAattCUImNsae6NHYnS9KrIwRdcY9DxFotXhNAKIKbAXlRnujIqUWoXXwqyFOeIQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/app.css" />
+</head>
+
+<body>
+    <!-- #Cursor -->
+    <div class="cursor"></div>
+    <div id="cursor">
+        <div class="cursor-circle"></div>
+    </div>
+
+    <!-- #Navbar -->
+    <nav id="navbar" class="flexbox">
+        <div class="navbar-inner">
+            <div class="navbar-left flexbox-left">
+                <div id="nav-button" cursor-class="arrow">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- #Menu -->
+    <div class="menu-wrapper flexbox">
+        <!-- Menu Right -->
+        <ul class="menu flexbox-col-left-start">
+            <li id="m-item-w-1" class="menu-item flexbox">
+                <h1 id="m-item-1" class="menu-item-inner" cursor-class="arrow">
+                    Home
+                </h1>
+            </li>
+            <li id="m-item-w-2" class="menu-item flexbox">
+                <h1 id="m-item-2" class="menu-item-inner" cursor-class="arrow">
+                    Projects
+                </h1>
+            </li>
+            <li id="m-item-w-3" class="menu-item flexbox">
+                <h1 id="m-item-3" class="menu-item-inner" cursor-class="arrow">
+                    Tasks
+                </h1>
+            </li>
+            <li id="m-item-w-4" class="menu-item flexbox">
+                <h1 id="m-item-4" class="menu-item-inner" cursor-class="arrow">
+                    Profile
+                </h1>
+            </li>
+        </ul>
+
+        <div class="menu-background"></div>
+    </div>
+
+    <!-- #Header -->
+    <header id="header">
+        <img class="header-logo" src="./assets/img/hero-logo.png" alt="Animation Factory Logo">
+        <img class="header-mascot" src="./assets/img/hero-mascot.png" alt="Animation Factory Mascot">
+    </header>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-wrapper">
+            <div class="row">
+                <div class="d-flex justify-content-center align-items-center col-12 social-media my-3">
+                    <a href="#" cursor-class="arrow"><i class="bi bi-twitter mx-3"></i></a>
+                    <a href="#" cursor-class="arrow"><i class="bi bi-instagram mx-3"></i></a>
+                    <a href="#" cursor-class="arrow"><i class="bi bi-facebook mx-3"></i></a>
+                    <a href="#" cursor-class="arrow"><i class="bi bi-youtube mx-3"></i></a>
+                </div>
+                <div class="d-flex justify-content-center align-items-center col-12 copyright my-3">
+                    <span>&copy;Animation Factory 2023</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="assets/js/plugins/jquery.js"></script>
+    <script src="assets/js/plugins/jquery-ui.js"></script>
+    <script src="assets/js/plugins/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/plugins/bootstrap.bundle.min.js.map"></script>
+    <script src="assets/js/function.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
