@@ -625,6 +625,61 @@ button {
   padding: 3rem;
 }
 
+/* Artstation */
+#artstation {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #eb811e;
+  background-image: url(../img/artstation-background.png);
+  background-size: cover;
+}
+.artstation-title {
+  width: 24%;
+  height: auto;
+  z-index: 3;
+  padding-top: 10rem;
+  position: relative;
+}
+.art::before {
+  content: "";
+  text-align: center;
+  font-size: var(--heading-medium);
+  font-weight: 600;
+  padding: 0.5rem 0;
+  transform: translateY(-50%) translateX(-20%);
+  height: auto;
+  width: 100%;
+  background-color: var(--white);
+  border: 4px solid black;
+  border-radius: 15px;
+}
+.art {
+  height: 35rem;
+  width: 100%;
+  background-color: var(--pink);
+  border: 5px solid white;
+  border-radius: 30px;
+  display: flex;
+  align-items: start;
+  background-image: url(https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80);
+  background-blend-mode: luminosity;
+}
+.art.odd {
+  align-items: end;
+}
+.artborder-1 .art::before {
+  content: "2D ART";
+}
+.artborder-2 .art::before {
+  content: "3D ART";
+}
+.artborder-3 .art::before {
+  content: "2D ART";
+}
+.artborder-4 .art::before {
+  content: "3D ART";
+}
+
 /* Footer */
 footer {
   width: 100%;
@@ -753,6 +808,7 @@ footer {
   }
 }
 @media only screen and (min-width: 1024px) {
+  /* About */
   .about-border::before {
     content: "About Animation Factory";
     font-family: "Baloo 2";
@@ -771,6 +827,42 @@ footer {
     -webkit-box-shadow: -12px 12px 0px 0px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: -12px 12px 0px 0px rgba(0, 0, 0, 0.2);
     box-shadow: -12px 12px 0px 0px rgba(0, 0, 0, 0.2);
+  }
+  /* Artstation */
+  #artstation .container-lg {
+    width: 100%;
+    height: 100%;
+  }
+  #artstation .container-lg .row {
+    width: 100%;
+    height: 100%;
+  }
+  .artborder-1 .art::after {
+    background-image: url(../img/svg/doodle-green.svg);
+  }
+  .artborder-2 .art::after {
+    background-image: url(../img/svg/doodle-blue.svg);
+  }
+  .artborder-3 .art::after {
+    background-image: url(../img/svg/doodle-orange.svg);
+  }
+  .artborder-4 .art::after {
+    background-image: url(../img/svg/doodle-pink.svg);
+  }
+  .art::after {
+    background-size: 7rem 14rem;
+    display: flex;
+    width: 7rem;
+    height: 14rem;
+    content: "";
+    transform: translateX(13rem) translateY(-10rem);
+    position: absolute;
+  }
+  .art.odd::before {
+    transform: translateY(50%) translateX(-20%);
+  }
+  .art.odd::after {
+    transform: translateX(13rem) translateY(4rem);
   }
 }
 @media only screen and (max-width: 834px) {
@@ -792,6 +884,33 @@ footer {
     padding: 1.5rem;
     font-size: var(--paragraph);
     line-height: 1.5rem;
+  }
+  /* Artstation */
+  .artstation-title {
+    width: 70%;
+    height: auto;
+    padding-top: 3rem;
+    position: relative;
+  }
+  .artborder {
+    margin: 2rem 0;
+  }
+  .art::before {
+    transform: translateY(70%) translateX(0);
+  }
+  .art {
+    height: 35rem;
+    width: 100%;
+    background-color: var(--pink);
+    border: 5px solid white;
+    border-radius: 30px;
+    display: flex;
+    align-items: start;
+    background-image: url(https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80);
+    background-blend-mode: luminosity;
+  }
+  .art.even {
+    align-items: end;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -860,5 +979,9 @@ footer {
     text-align: center;
     line-height: 1.5rem;
     padding: 1rem;
+  }
+  /* Artstation */
+  .art {
+    height: 15rem;
   }
 }
