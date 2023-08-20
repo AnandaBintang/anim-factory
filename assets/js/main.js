@@ -1,3 +1,13 @@
+$(document).ready(() => {
+  imageResponsive();
+
+  $("#preloader").addClass("preload-none");
+
+  setTimeout(() => {
+    $("#preloader").remove();
+  }, 500);
+});
+
 // navbar button
 let navBtn = $("#nav-button");
 let menu = $(".menu-wrapper");

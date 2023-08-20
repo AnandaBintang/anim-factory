@@ -145,6 +145,227 @@ button {
   flex-direction: column;
   align-items: flex-start;
 }
+.preload-none {
+  opacity: 0;
+}
+
+/* Preloader */
+#preloader {
+  background-color: var(--white);
+  height: 100vh;
+  width: 100vw;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  transition: all 0.5s;
+}
+.loader {
+  --path: #2f3545;
+  --dot: #5628ee;
+  --duration: 3s;
+  width: 44px;
+  height: 44px;
+  position: relative;
+}
+.loader:before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  position: absolute;
+  display: block;
+  background: var(--dot);
+  top: 37px;
+  left: 19px;
+  transform: translate(-18px, -18px);
+  -webkit-animation: dotRect var(--duration)
+    cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+  animation: dotRect var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86)
+    infinite;
+}
+.loader svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.loader svg rect,
+.loader svg polygon,
+.loader svg circle {
+  fill: none;
+  stroke: var(--path);
+  stroke-width: 10px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+.loader svg polygon {
+  stroke-dasharray: 145 76 145 76;
+  stroke-dashoffset: 0;
+  -webkit-animation: pathTriangle var(--duration)
+    cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+  animation: pathTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86)
+    infinite;
+}
+.loader svg rect {
+  stroke-dasharray: 192 64 192 64;
+  stroke-dashoffset: 0;
+  -webkit-animation: pathRect 3s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+  animation: pathRect 3s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+}
+.loader svg circle {
+  stroke-dasharray: 150 50 150 50;
+  stroke-dashoffset: 75;
+  -webkit-animation: pathCircle var(--duration)
+    cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+  animation: pathCircle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86)
+    infinite;
+}
+.loader.triangle {
+  width: 48px;
+}
+.loader.triangle:before {
+  left: 21px;
+  transform: translate(-10px, -18px);
+  -webkit-animation: dotTriangle var(--duration)
+    cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+  animation: dotTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86)
+    infinite;
+}
+
+@-webkit-keyframes pathTriangle {
+  33% {
+    stroke-dashoffset: 74;
+  }
+  66% {
+    stroke-dashoffset: 147;
+  }
+  100% {
+    stroke-dashoffset: 221;
+  }
+}
+
+@keyframes pathTriangle {
+  33% {
+    stroke-dashoffset: 74;
+  }
+  66% {
+    stroke-dashoffset: 147;
+  }
+  100% {
+    stroke-dashoffset: 221;
+  }
+}
+@-webkit-keyframes dotTriangle {
+  33% {
+    transform: translate(0, 0);
+  }
+  66% {
+    transform: translate(10px, -18px);
+  }
+  100% {
+    transform: translate(-10px, -18px);
+  }
+}
+@keyframes dotTriangle {
+  33% {
+    transform: translate(0, 0);
+  }
+  66% {
+    transform: translate(10px, -18px);
+  }
+  100% {
+    transform: translate(-10px, -18px);
+  }
+}
+@-webkit-keyframes pathRect {
+  25% {
+    stroke-dashoffset: 64;
+  }
+  50% {
+    stroke-dashoffset: 128;
+  }
+  75% {
+    stroke-dashoffset: 192;
+  }
+  100% {
+    stroke-dashoffset: 256;
+  }
+}
+@keyframes pathRect {
+  25% {
+    stroke-dashoffset: 64;
+  }
+  50% {
+    stroke-dashoffset: 128;
+  }
+  75% {
+    stroke-dashoffset: 192;
+  }
+  100% {
+    stroke-dashoffset: 256;
+  }
+}
+@-webkit-keyframes dotRect {
+  25% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(18px, -18px);
+  }
+  75% {
+    transform: translate(0, -36px);
+  }
+  100% {
+    transform: translate(-18px, -18px);
+  }
+}
+@keyframes dotRect {
+  25% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(18px, -18px);
+  }
+  75% {
+    transform: translate(0, -36px);
+  }
+  100% {
+    transform: translate(-18px, -18px);
+  }
+}
+@-webkit-keyframes pathCircle {
+  25% {
+    stroke-dashoffset: 125;
+  }
+  50% {
+    stroke-dashoffset: 175;
+  }
+  75% {
+    stroke-dashoffset: 225;
+  }
+  100% {
+    stroke-dashoffset: 275;
+  }
+}
+@keyframes pathCircle {
+  25% {
+    stroke-dashoffset: 125;
+  }
+  50% {
+    stroke-dashoffset: 175;
+  }
+  75% {
+    stroke-dashoffset: 225;
+  }
+  100% {
+    stroke-dashoffset: 275;
+  }
+}
+.loader {
+  display: inline-block;
+  margin: 0 16px;
+}
 
 /* Navbar */
 #navbar {
@@ -353,26 +574,55 @@ button {
 
 /* Header */
 #header {
-  height: 100vh;
+  height: 110vh;
   width: auto;
   background-image: url(../img/hero-background.png);
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#header .header-logo {
-  width: auto;
+.header-logo {
+  width: 80%;
   height: auto;
-  top: 25%;
-  left: 15%;
-  z-index: 3;
+}
+
+/* About */
+#about {
+  height: auto;
+  width: auto;
+  background-image: url(../img/about-background.png);
+  background-size: cover;
+}
+#about .row {
+  height: 100vh;
+  width: auto;
+}
+.about-art__tree {
+  width: 70%;
+  height: auto;
+  z-index: 1;
   position: absolute;
 }
-#header .header-mascot {
-  width: auto;
-  height: 90%;
-  top: 5%;
-  left: 20%;
-  position: absolute;
+.about-art__pool {
+  width: 100%;
+  height: auto;
   z-index: 2;
+  position: relative;
+}
+.about-border {
+  margin: 5rem;
+  background-color: var(--white);
+  border: 7px solid #dedede;
+  z-index: 2;
+  position: relative;
+}
+.about-text {
+  color: var(--black);
+  font-family: "Baloo 2";
+  font-size: 1.5rem;
+  line-height: 3rem;
+  padding: 3rem;
 }
 
 /* Footer */
@@ -492,28 +742,54 @@ footer {
     pointer-events: none;
     z-index: 54;
   }
-  /* Header */
-  #header .header-logo {
-    width: auto;
-    height: auto;
-    top: 25%;
-    left: 10%;
+}
+@media only screen and (min-width: 1024px) {
+  .about-border::before {
+    content: "About Animation Factory";
+    font-family: "Baloo 2";
+    font-size: var(--heading-medium);
+    font-weight: 600;
+    color: var(--cyan);
+    text-align: center;
+    background-color: var(--primary);
+    width: 70%;
+    border: 1px solid var(--black);
+    border-radius: 10px;
+    height: 3rem;
+    top: -10%;
+    left: 15%;
     position: absolute;
-    z-index: 2;
+    -webkit-box-shadow: -12px 12px 0px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: -12px 12px 0px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: -12px 12px 0px 0px rgba(0, 0, 0, 0.2);
   }
-  #header .header-mascot {
-    width: auto;
-    height: 65%;
-    top: 20%;
-    left: 13%;
+}
+@media only screen and (max-width: 834px) {
+  /* About */
+  #about .row {
+    height: auto;
+  }
+  .about-art__tree {
+    width: 100%;
     position: absolute;
-    z-index: 2;
+  }
+  .about-border::before {
+    font-size: var(--paragraph);
+  }
+  .about-border {
+    margin: 0rem 1rem 1rem 1rem;
+  }
+  .about-text {
+    padding: 1.5rem;
+    font-size: var(--paragraph);
+    line-height: 1.5rem;
   }
 }
 @media only screen and (max-width: 768px) {
   :root {
     /* Sizes */
     --heading: 2.2rem;
+    --heading-medium: 1.1rem;
   }
   /* Navbar */
   .navbar-inner {
@@ -536,23 +812,6 @@ footer {
     pointer-events: none;
     z-index: 54;
   }
-  /* Header */
-  #header .header-logo {
-    width: auto;
-    height: auto;
-    top: 45%;
-    left: 3%;
-    position: absolute;
-    z-index: 3;
-  }
-  #header .header-mascot {
-    width: auto;
-    height: 65%;
-    top: 21%;
-    left: -28%;
-    position: absolute;
-    z-index: 2;
-  }
 }
 @media only screen and (max-width: 576px) {
   /* Menu */
@@ -571,22 +830,26 @@ footer {
   }
 }
 @media only screen and (max-width: 480px) {
-  /* Header */
-  #header .header-logo {
-    width: 60%;
-    height: auto;
-    top: 70%;
-    left: 18%;
-    rotate: 12deg;
-    position: relative;
-    z-index: 3;
+  #about .row {
+    margin-top: 3rem;
   }
-  #header .header-mascot {
-    width: auto;
-    height: 50%;
-    top: 0%;
-    left: -52%;
+  .about-art__tree {
+    width: 100%;
     position: relative;
-    z-index: 2;
+  }
+  .about-art__pool {
+    margin-top: 2rem;
+  }
+  .about-border::before {
+    font-size: var(--paragraph);
+  }
+  .about-border {
+    margin: 0 1rem;
+  }
+  .about-text {
+    margin-top: 1rem;
+    text-align: center;
+    line-height: 1.5rem;
+    padding: 1rem;
   }
 }

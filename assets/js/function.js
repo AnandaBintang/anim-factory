@@ -37,3 +37,34 @@ function loop() {
   updateCursor();
   requestAnimationFrame(loop);
 }
+
+function imageResponsive() {
+  const mobile = window.matchMedia("(max-width: 480px)");
+  const tablet = window.matchMedia("(max-width: 850px)");
+
+  if (mobile.matches) {
+    // Header
+    $("#animation-factory-logo").attr("src", "./assets/img/mascot.webp");
+    // About
+    $(".about-art__tree").attr("src", "./assets/img/pohon.webp");
+    $(".about-art__pool").attr("src", "./assets/img/kolam-full.webp");
+  } else if (tablet.matches) {
+    // Header
+    $("#animation-factory-logo").attr(
+      "src",
+      "./assets/img/mascot-desktop.webp"
+    );
+    // About
+    $(".about-art__tree").attr("src", "./assets/img/pohon-desktop.webp");
+    $(".about-art__pool").attr("src", "./assets/img/kolam-full.webp");
+  } else {
+    // Header
+    $("#animation-factory-logo").attr(
+      "src",
+      "./assets/img/mascot-desktop.webp"
+    );
+    // About
+    $(".about-art__tree").attr("src", "./assets/img/pohon-desktop.webp");
+    $(".about-art__pool").attr("src", "./assets/img/kolam.webp");
+  }
+}
