@@ -680,6 +680,75 @@ button {
   content: "3D ART";
 }
 
+/* Partner */
+#partner {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url(../img/partner-background.png);
+  background-size: cover;
+}
+#partner .container {
+  height: 100%;
+  width: 100%;
+  padding: 7rem 0;
+}
+.partner-title__border {
+  width: 19rem;
+  height: 6rem;
+  border-radius: 80px;
+  background-color: #fff;
+  position: relative;
+}
+.partner-title__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 1rem;
+  position: relative;
+}
+.partner-title__content img {
+  width: 6rem;
+  height: auto;
+  position: relative;
+}
+.partner-title__content h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  position: relative;
+}
+.partner-border {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15rem;
+  height: 8rem;
+  border-radius: 100px;
+  background-color: var(--white);
+  -webkit-box-shadow: inset 10px 10px 5px -1px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: inset 10px 10px 5px -1px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 10px 10px 5px -1px rgba(0, 0, 0, 0.25);
+}
+.partner-border img {
+  width: 6rem;
+  height: auto;
+}
+.partner-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12rem;
+  height: 3rem;
+  border: 5px solid #000;
+  border-radius: 30px;
+  background-color: #fff;
+}
+.partner-name h1 {
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
 /* Footer */
 footer {
   width: 100%;
@@ -864,6 +933,16 @@ footer {
   .art.odd::after {
     transform: translateX(13rem) translateY(4rem);
   }
+  /* partner */
+  #partner::before {
+    content: "";
+    background-image: url(../img/partner-header.webp);
+    background-size: cover;
+    width: 24rem;
+    height: 9.5rem;
+    margin: 3rem 5rem;
+    position: absolute;
+  }
 }
 @media only screen and (max-width: 834px) {
   /* About */
@@ -983,5 +1062,35 @@ footer {
   /* Artstation */
   .art {
     height: 15rem;
+  }
+  /* Partner */
+  #partner .container {
+    padding: 3rem 0;
+  }
+  .partner-title__border {
+    width: 13rem;
+    height: 4rem;
+  }
+  .partner-title__content img {
+    width: 4rem;
+  }
+  .partner-title__content h1 {
+    font-size: 2rem;
+  }
+  .partner-border {
+    width: 9rem;
+    height: 6rem;
+  }
+  .partner-border img {
+    width: 4rem;
+  }
+  .partner-name {
+    width: 8rem;
+    height: 3rem;
+    border: 3px solid #000;
+  }
+  .partner-name h1 {
+    font-size: 1rem;
+    font-weight: 600;
   }
 }
