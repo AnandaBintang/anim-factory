@@ -370,7 +370,7 @@ button {
 /* Navbar */
 #navbar {
   top: 2em;
-  width: 100%;
+  width: 50%;
   height: 5em;
   position: absolute;
   z-index: 80;
@@ -391,73 +391,10 @@ button {
 }
 /* Nav Button */
 #nav-button {
-  margin: 0;
-  width: 2em;
-  height: 1.5em;
-  position: relative;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: 0.35s cubic-bezier(0.175, 0.685, 0.32, 1.175);
-  -moz-transition: 0.35s cubic-bezier(0.175, 0.685, 0.32, 1.175);
-  -o-transition: 0.35s cubic-bezier(0.175, 0.685, 0.32, 1.175);
-  transition: 0.35s cubic-bezier(0.175, 0.685, 0.32, 1.175);
-  z-index: 110;
-}
-#nav-button span {
-  left: 0;
-  width: 100%;
-  height: 2px;
-  display: block;
-  position: absolute;
-  background: var(--white);
-  border-radius: 19px;
-  opacity: 1;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: 0.35s cubic-bezier(0.175, 0.685, 0.32, 1.175);
-  -moz-transition: 0.35s cubic-bezier(0.175, 0.685, 0.32, 1.175);
-  -o-transition: 0.35s cubic-bezier(0.175, 0.685, 0.32, 1.175);
-  transition: 0.35s cubic-bezier(0.175, 0.685, 0.32, 1.175);
-}
-#nav-button span:nth-child(1) {
-  top: 0;
-  width: 100%;
-}
-#nav-button span:nth-child(2),
-#nav-button span:nth-child(3) {
-  top: 0.75em;
-  width: 35%;
-}
-#nav-button span:nth-child(4) {
-  top: 1.5em;
-  width: 65%;
-}
-#nav-button.open span:nth-child(1) {
-  top: 2em;
-  width: 0;
-}
-#nav-button.open span:nth-child(2) {
-  width: 100%;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-#nav-button.open span:nth-child(3) {
-  width: 100%;
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-#nav-button.open span:nth-child(4) {
-  top: 18px;
-  width: 0;
-  left: 50%;
+  width: 7rem;
+  height: 4rem;
+  background-size: cover;
+  background-image: url(../img/menu.webp);
 }
 /* Menu */
 .menu-wrapper {
@@ -552,7 +489,7 @@ button {
   position: fixed;
   pointer-events: none;
   will-change: transform;
-  /* mix-blend-mode: difference; */
+  mix-blend-mode: difference;
   transition: transform 0.05s linear;
   z-index: 99;
 }
@@ -599,7 +536,7 @@ button {
   width: auto;
 }
 .about-art__tree {
-  width: 70%;
+  width: 65%;
   height: auto;
   z-index: 1;
   position: absolute;
@@ -632,6 +569,7 @@ button {
   background-color: #eb811e;
   background-image: url(../img/artstation-background.png);
   background-size: cover;
+  padding: 0 0 10rem 0;
 }
 .artstation-title {
   width: 24%;
@@ -650,7 +588,6 @@ button {
   height: auto;
   width: 100%;
   background-color: var(--white);
-  border: 4px solid black;
   border-radius: 15px;
 }
 .art {
@@ -661,23 +598,29 @@ button {
   border-radius: 30px;
   display: flex;
   align-items: start;
-  background-image: url(https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80);
-  background-blend-mode: luminosity;
+  background-size: cover;
+  background-position: center center;
+}
+.art-1 {
+  background-image: url(../img/intelectual-product/indekos.png);
+}
+.art-2 {
+  background-image: url(../img/intelectual-product/alto.png);
 }
 .art.odd {
   align-items: end;
 }
 .artborder-1 .art::before {
-  content: "2D ART";
+  content: "Indekos";
 }
 .artborder-2 .art::before {
-  content: "3D ART";
+  content: "Alto & Clu";
 }
 .artborder-3 .art::before {
-  content: "2D ART";
+  content: "Gyko Telescope";
 }
 .artborder-4 .art::before {
-  content: "3D ART";
+  content: "Terror";
 }
 
 /* Partner */
@@ -733,17 +676,18 @@ button {
   height: auto;
 }
 .partner-name {
+  color: var(--white);
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 12rem;
-  height: 3rem;
-  border: 5px solid #000;
+  width: 16rem;
+  height: 4rem;
   border-radius: 30px;
-  background-color: #fff;
+  background-color: #333333;
+  padding: 0 3rem;
 }
 .partner-name h1 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-align: center;
   font-weight: 800;
   text-transform: uppercase;
@@ -1053,17 +997,6 @@ footer {
   }
   .art::before {
     transform: translateY(70%) translateX(0);
-  }
-  .art {
-    height: 35rem;
-    width: 100%;
-    background-color: var(--pink);
-    border: 5px solid white;
-    border-radius: 30px;
-    display: flex;
-    align-items: start;
-    background-image: url(https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80);
-    background-blend-mode: luminosity;
   }
   .art.even {
     align-items: end;
