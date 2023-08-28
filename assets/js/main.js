@@ -26,7 +26,7 @@ navBtn.click(function () {
     }, 275);
   } else {
     navBtn.toggleClass("open");
-    navBtn.css("transform", "rotate(180deg)");
+    // navBtn.css("transform", "rotate(180deg)");
     menu.css("opacity", "1");
     $("body").css("overflow", "hidden");
     setTimeout(function () {
@@ -45,46 +45,67 @@ const menuItem1 = document.querySelector("#m-item-1");
 const menuItem2 = document.querySelector("#m-item-2");
 const menuItem3 = document.querySelector("#m-item-3");
 const menuItem4 = document.querySelector("#m-item-4");
+const menuItem5 = document.querySelector("#m-item-5");
 
 menuItem1.addEventListener("mouseenter", (e) => {
   menuItem2.style.opacity = ".12";
   menuItem3.style.opacity = ".12";
   menuItem4.style.opacity = ".12";
+  menuItem5.style.opacity = ".12";
 });
 menuItem1.addEventListener("mouseleave", (e) => {
   menuItem2.style.opacity = "1";
   menuItem3.style.opacity = "1";
   menuItem4.style.opacity = "1";
+  menuItem5.style.opacity = "1";
 });
 menuItem2.addEventListener("mouseenter", (e) => {
   menuItem1.style.opacity = ".12";
   menuItem3.style.opacity = ".12";
   menuItem4.style.opacity = ".12";
+  menuItem5.style.opacity = ".12";
 });
 menuItem2.addEventListener("mouseleave", (e) => {
   menuItem1.style.opacity = "1";
   menuItem3.style.opacity = "1";
   menuItem4.style.opacity = "1";
+  menuItem5.style.opacity = "1";
 });
 menuItem3.addEventListener("mouseenter", (e) => {
   menuItem1.style.opacity = ".12";
   menuItem2.style.opacity = ".12";
   menuItem4.style.opacity = ".12";
+  menuItem5.style.opacity = ".12";
 });
 menuItem3.addEventListener("mouseleave", (e) => {
   menuItem1.style.opacity = "1";
   menuItem2.style.opacity = "1";
   menuItem4.style.opacity = "1";
+  menuItem5.style.opacity = "1";
 });
 menuItem4.addEventListener("mouseenter", (e) => {
   menuItem1.style.opacity = ".12";
   menuItem2.style.opacity = ".12";
   menuItem3.style.opacity = ".12";
+  menuItem5.style.opacity = ".12";
 });
 menuItem4.addEventListener("mouseleave", (e) => {
   menuItem1.style.opacity = "1";
   menuItem2.style.opacity = "1";
   menuItem3.style.opacity = "1";
+  menuItem5.style.opacity = "1";
+});
+menuItem5.addEventListener("mouseenter", (e) => {
+  menuItem1.style.opacity = ".12";
+  menuItem2.style.opacity = ".12";
+  menuItem3.style.opacity = ".12";
+  menuItem4.style.opacity = ".12";
+});
+menuItem5.addEventListener("mouseleave", (e) => {
+  menuItem1.style.opacity = "1";
+  menuItem2.style.opacity = "1";
+  menuItem3.style.opacity = "1";
+  menuItem4.style.opacity = "1";
 });
 
 const mouse = { x: -100, y: -100 }; // mouse pointer's coordinates
