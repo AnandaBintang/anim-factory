@@ -955,6 +955,13 @@ footer {
   .art.even {
     align-items: end;
   }
+  /* Project */
+  .project-wrapper img {
+    width: 100%;
+    height: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
 }
 @media only screen and (max-width: 768px) {
   :root {
@@ -1058,24 +1065,8 @@ footer {
     font-weight: 600;
   }
   /* Projects */
-  .project-border {
-    width: 100%;
-  }
   .project-title {
     font-size: 3rem;
     -webkit-text-stroke: 1px var(--pink);
-  }
-  .cards .title {
-    text-align: center;
-    font-size: 3rem;
-    font-weight: 800;
-    position: relative;
-  }
-  .cards .subtitle {
-    margin-top: 1rem;
-    text-align: center;
-    font-weight: 600;
-    font-size: 0.8rem;
-    position: relative;
   }
 }

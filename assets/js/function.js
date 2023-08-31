@@ -47,6 +47,8 @@ function imageResponsive() {
     $("#animation-factory-logo").attr("src", "./assets/img/mascot.webp");
     // About
     $(".about-art__tree").attr("src", "./assets/img/pohon.webp");
+    // Project
+    $("#project-line").attr("src", "./assets/img/project.webp");
   } else if (tablet.matches) {
     // Header
     $("#animation-factory-logo").attr(
@@ -55,6 +57,12 @@ function imageResponsive() {
     );
     // About
     $(".about-art__tree").attr("src", "./assets/img/pohon-desktop.webp");
+    // Project
+    $("#project").css(
+      "background-image",
+      "./assets/img/project-background.png)"
+    );
+    $("#project-line").attr("src", "./assets/img/project.webp");
   } else {
     // Header
     $("#animation-factory-logo").attr(
@@ -63,5 +71,15 @@ function imageResponsive() {
     );
     // About
     $(".about-art__tree").attr("src", "./assets/img/pohon-desktop.webp");
+    $("#project").css(
+      "background-image",
+      "./assets/img/project-background.png)"
+    );
+    // Project
+    $("#project").css(
+      "background-image",
+      "url(./assets/img/project-background-desktop.png)"
+    );
+    $("#project-line").attr("src", "./assets/img/project-desktop.webp");
   }
 }
